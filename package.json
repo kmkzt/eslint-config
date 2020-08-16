@@ -2,19 +2,19 @@
   "name": "@kmkzt/eslint-config",
   "version": "0.0.2",
   "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "kmkzt",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "files": [
     "lib",
     "index.js",
     "react.js",
     "typescript.js"
   ],
-  "keywords": [],
-  "author": "kmkzt",
-  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "peerDependencies": {
     "eslint": ">=7.0.0"
   },
