@@ -20,7 +20,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: ['@kmkzt/node'],
+  extends: ['@kmkzt/eslint-config/node'],
 }
 ```
 
@@ -28,7 +28,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: ['@kmkzt/react'],
+  extends: ['@kmkzt/eslint-config/react'],
 }
 ```
 
@@ -36,7 +36,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: ['@kmkzt/react'],
+  extends: ['@kmkzt/eslint-config/react'],
 }
 ```
 
@@ -44,23 +44,23 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: ['@kmkzt/lib/javascript'],
+  extends: ['@kmkzt/eslint-config/lib/javascript'],
   overrides: [
     {
       files: ['*.tsx', '*.jsx'],
-      extends: ['@kmkzt/lib/react'],
+      extends: ['@kmkzt/eslint-config/lib/react'],
     },
     {
       files: ['*.ts', '*.tsx'],
-      extends: ['@kmkzt/lib/typescript'],
+      extends: ['@kmkzt/eslint-config/lib/typescript'],
     },
     {
       files: ['*.test.*', '*.spec.*'],
-      extends: ['@kmkzt/lib/jest'],
+      extends: ['@kmkzt/eslint-config/lib/jest'],
     },
     {
       files: ['scripts/**'],
-      extends: ['@kmkzt/lib/node'],
+      extends: ['@kmkzt/eslint-config/lib/node'],
     },
   ],
 }
