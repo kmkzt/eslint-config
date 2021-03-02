@@ -1,0 +1,27 @@
+name: Published automatically
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
+jobs:
+  release:
+    name: Publish to npm registry
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+      - name: setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          registry-url: 'https://registry.npmjs.org'
+      # - name: test
+      #   run: npm run test
+      - name: check version
+        run: npx can-npm-publish --verbose
+      - name: publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
